@@ -11,7 +11,7 @@
 <body>
 
     <div class="score-board">
-        <div id="user-label" class="badge">você</div>
+        <div id="user-label" class="badge">voc&ecirc;</div>
         <div id="computer-label"class="badge">comp</div>
     
         <span id="placarUser">0</span> : <span id="placarPc">0</span>
@@ -25,18 +25,20 @@
         <p id="result">Pedra, Papel ou Tesoura?</p>
     </div>
 
-    <div class="escolhas">
-        <button id="pedra" class="btn"><i class="fa fa-hand-rock-o" style="font-size: 45px;" aria-hidden="true"></i></button>
-        <button id="papel" class="btn"><i class="fa fa-hand-paper-o" style="font-size: 45px;" aria-hidden="true"></i></button>
-        <button id="tesoura" class="btn"><i class="fa fa-hand-scissors-o" style="font-size: 45px;" aria-hidden="true"></i></button>
-    </div>
-
-    <div class="escolhaBot">
-        <div class="choiceBot">
-            <i class="fa fa-question-circle" id="choiceBotIcon" style="font-size: 45px;color: black;" aria-hidden="true"></i>
+    <div class="ctnFlex">
+        <div class="escolhas">
+            <button id="pedra" class="btn"><i class="fa fa-hand-rock-o" style="font-size: 45px;" aria-hidden="true"></i></button>
+            <button id="papel" class="btn"><i class="fa fa-hand-paper-o" style="font-size: 45px;" aria-hidden="true"></i></button>
+            <button id="tesoura" class="btn"><i class="fa fa-hand-scissors-o" style="font-size: 45px;" aria-hidden="true"></i></button>
+        </div>
+        <div class="escolhaBot">
+            <div class="choiceBot">
+                <i class="fa fa-question-circle" id="choiceBotIcon" style="font-size: 45px;color: black;" aria-hidden="true"></i>
+            </div>
         </div>
     </div>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
