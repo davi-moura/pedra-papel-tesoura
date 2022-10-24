@@ -2,6 +2,7 @@ let contadorJogador = 0
 let contadorPc = 0
 const placarUser = document.getElementById("placarUser");
 const placarPc = document.getElementById("placarPc");
+const result = document.getElementById("result");
 
 function alterarScore(){
     // Função para alterar o score
@@ -52,7 +53,7 @@ function tratarChoices(choiceUser,choicePC){
            
         } else if (choicePC == "pedra") {
 
-            empate()
+            empate(choiceUser,choicePC)
 
         }
 
@@ -68,7 +69,7 @@ function tratarChoices(choiceUser,choicePC){
 
         } else if (choicePC == "tesoura") {
 
-            empate()
+            empate(choiceUser,choicePC)
 
         }
     }
@@ -84,30 +85,31 @@ function tratarChoices(choiceUser,choicePC){
 
         }else if (choicePC == "papel")  {
 
-            empate()
+            empate(choiceUser,choicePC)
 
         }
 
     }
 
-    console.log(choiceUser)
-    console.log(choicePC)
 }
 
 function winUser(choiceUser,choicePC){
 
+    result.innerHTML = choiceUser.toUpperCase() + " ganha de " + choicePC.toUpperCase() + ": Você ganhou!!"
     contadorJogador++
     alterarScore()
-    console.log(choiceUser + " ganha " + choicePC)
+
 }
 
 function loseUser(choiceUser,choicePC){
 
-    console.log(choiceUser + " perde " + choicePC)
+    result.innerHTML = choiceUser.toUpperCase() + " perde para " + choicePC.toUpperCase() + ": Você perdeu!!"
     contadorPc++
     alterarScore()
 }
 
-function empate(){
-    console.log("empate")
+function empate(choiceUser,choicePC){
+
+    result.innerHTML = choiceUser .toUpperCase()+ " empata com " + choicePC.toUpperCase() + ": Empate!"
+
 }
