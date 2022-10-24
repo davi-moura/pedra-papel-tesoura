@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7f1ba15388.js" crossorigin="anonymous"></script>
     <title>Pedra-Papel-Tesoura</title>
 </head>
 <body>
 
     <div class="score-board">
-        <div id="user-label" class="badge">user</div>
+        <div id="user-label" class="badge">você</div>
         <div id="computer-label"class="badge">comp</div>
     
-        <span id="placarUser">0</span>:<span id="placarPc">0</span>
+        <span id="placarUser">0</span> : <span id="placarPc">0</span>
     </div>
 
     <div class="reiniciar">
-        <button onclick="limpaScore()">Reiniciar Jogo</button>
+        <button class="btnReiniciar" id="btnReiniciar" onclick="limpaScore()"><i class="fa fa-refresh" aria-hidden="true"></i>  Reiniciar Jogo</button>
     </div>
 
     <div class="resultt">
@@ -25,9 +26,15 @@
     </div>
 
     <div class="escolhas">
-        <button id="pedra" class="btn">Pedra</button>
-        <button id="papel" class="btn">Papel</button>
-        <button id="tesoura" class="btn">Tesoura</button>
+        <button id="pedra" class="btn"><i class="fa fa-hand-rock-o" style="font-size: 45px;" aria-hidden="true"></i></button>
+        <button id="papel" class="btn"><i class="fa fa-hand-paper-o" style="font-size: 45px;" aria-hidden="true"></i></button>
+        <button id="tesoura" class="btn"><i class="fa fa-hand-scissors-o" style="font-size: 45px;" aria-hidden="true"></i></button>
+    </div>
+
+    <div class="escolhaBot">
+        <div class="choiceBot">
+            <i class="fa fa-question-circle" id="choiceBotIcon" style="font-size: 45px;color: black;" aria-hidden="true"></i>
+        </div>
     </div>
     
     <script src="script.js"></script>

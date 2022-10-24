@@ -3,17 +3,49 @@ let contadorPc = 0
 const placarUser = document.getElementById("placarUser");
 const placarPc = document.getElementById("placarPc");
 const result = document.getElementById("result");
+const choiceBotIcon = document.getElementById("btnReiniciar");
+
+
+function viewChoicePC(choicePC) {
+
+    switch (choicePC) {
+        case "pedra":
+            var nova = "fa fa-hand-rock-o"
+            break;
+        case "tesoura":
+            var nova = "fa fa-hand-scissors-o"
+            break;
+        case "papel":
+            var nova = "fa fa-hand-paper-o"
+            break;
+    
+        default:
+            var nova = "fa fa-question-circle"
+            break;
+    }
+
+    document.getElementById("choiceBotIcon").classList.value = nova
+}
+
 
 function alterarScore(){
     // Função para alterar o score
     placarUser.innerHTML = `${contadorJogador}`
     placarPc.innerHTML = `${contadorPc}`
+
+    if(contadorJogador || contadorPc){
+        choiceBotIcon.style.display = 'initial';
+    }
 }
+
 function limpaScore(){
     contadorJogador = 0
     contadorPc = 0
     placarUser.innerHTML = 0
     placarPc.innerHTML = 0
+    result.innerHTML = "Pedra, Papel ou Tesoura?"
+    choiceBotIcon.style.display = 'none';
+    viewChoicePC()
 }
 
 //Busca todos os elementos da classe 'btn'
@@ -95,21 +127,24 @@ function tratarChoices(choiceUser,choicePC){
 
 function winUser(choiceUser,choicePC){
 
-    result.innerHTML = choiceUser.toUpperCase() + " ganha de " + choicePC.toUpperCase() + ": Você ganhou!!"
+    result.innerHTML = choiceUser.toUpperCase() + " ganha de " + choicePC.toUpperCase() + ": Vc ganhou!!"
     contadorJogador++
+    viewChoicePC(choicePC)
     alterarScore()
 
 }
 
 function loseUser(choiceUser,choicePC){
 
-    result.innerHTML = choiceUser.toUpperCase() + " perde para " + choicePC.toUpperCase() + ": Você perdeu!!"
+    result.innerHTML = choiceUser.toUpperCase() + " perde para " + choicePC.toUpperCase() + ": Vc perdeu!!"
     contadorPc++
+    viewChoicePC(choicePC)
     alterarScore()
 }
 
 function empate(choiceUser,choicePC){
 
     result.innerHTML = choiceUser .toUpperCase()+ " empata com " + choicePC.toUpperCase() + ": Empate!"
+    viewChoicePC(choicePC)
 
 }
