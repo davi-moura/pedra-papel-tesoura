@@ -32,9 +32,8 @@
      right: -25px;
 }
  #computer-label-choice{
-     position: absolute;
-     top: -10px;
-     right: 29px;
+     position: inherit;
+     top: -25px;
 }
  #computer-label{
      position: absolute;
@@ -77,7 +76,7 @@
      background-color: darkslateblue;
      border-radius: 40px;
      text-align: center;
-     padding: 38px 15px;
+     padding: 20px 15px;
      position: relative;
 }
  .reiniciar{
@@ -141,8 +140,5 @@
          width: 40%;
          margin: 35% auto;
     }
-    #computer-label-choice{
-        right: 25px;
-   }
 }
  
