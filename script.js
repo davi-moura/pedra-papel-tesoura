@@ -6,6 +6,17 @@ const result = document.getElementById("result");
 const choiceBotIcon = document.getElementById("btnReiniciar");
 
 
+
+
+
+//criar function para colorir a borda do botao pra caso o cara ganhe ou perca
+
+
+//mostrar todas as opcoes de escolha do bot, e a q ele escolher pintar de verde, e pintar a borda dele se ele ganhou ou n
+
+//colocar titulo de quem é quem em cima das bordas da div, pra dizer quem é o user e quem é o comp
+
+
 function viewChoicePC(choicePC) {
 
     switch (choicePC) {

@@ -147,4 +147,19 @@ box-shadow: 0 0 10px #d01115;
 border: 4px solid #464647;
 box-shadow: 0 0 10px #25292b;
 }
+
+/* este estilo aplica-se a partir de 0px até 900px */
+@media ( max-width: 900px ) {
+
+  .escolhas{
+    width: 40%;
+  }
+  .ctnFlex{
+    max-width: 100%;
+  }
+  .escolhaBot{
+    width: 40%;
+    margin: 35% auto;
+  }
+}
   
