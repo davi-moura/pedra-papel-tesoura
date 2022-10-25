@@ -68,7 +68,7 @@ color: #fff;
     margin: 50px auto;
     color: #fff;
     border-radius: 40px;
-    padding: 13px 20px;
+    padding: 13px 15px;
     position: relative;
     background-color: darkslateblue;
   }
@@ -111,6 +111,7 @@ padding: 15px;
 margin: 10px 20px;
 display: inline-block;
 transition: all 0.4s ease;
+cursor:pointer;
 }
 .choiceBot{
     background-color: #fff;
@@ -120,10 +121,6 @@ transition: all 0.4s ease;
     margin: 0 15px;
     display: inline-block;
     transition: all 0.4s ease;
-}
-.btn:hover{
-background: #31b43a;
-cursor:pointer;
 }
 
 #action-message{

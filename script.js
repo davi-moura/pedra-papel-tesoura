@@ -14,7 +14,7 @@ const choiceBotIcon = document.getElementById("btnReiniciar");
 
 //mostrar todas as opcoes de escolha do bot, e a q ele escolher pintar de verde, e pintar a borda dele se ele ganhou ou n
 
-//colocar titulo de quem é quem em cima das bordas da div, pra dizer quem é o user e quem é o comp
+//colocar titulo de quem ï¿½ quem em cima das bordas da div, pra dizer quem ï¿½ o user e quem ï¿½ o comp
 
 
 function viewChoicePC(choicePC) {
@@ -40,7 +40,7 @@ function viewChoicePC(choicePC) {
 
 
 function alterarScore(){
-    // Função para alterar o score
+    // Funï¿½ï¿½o para alterar o score
     placarUser.innerHTML = `${contadorJogador}`
     placarPc.innerHTML = `${contadorPc}`
 
@@ -143,6 +143,12 @@ function winUser(choiceUser,choicePC){
     viewChoicePC(choicePC)
     alterarScore()
 
+    document.getElementById(choiceUser).style.backgroundColor = "green";
+
+    function horarioAtual() {
+        document.getElementById(choiceUser).style.backgroundColor = "white";
+      }
+      setTimeout(horarioAtual, 1000);
 }
 
 function loseUser(choiceUser,choicePC){
@@ -151,11 +157,23 @@ function loseUser(choiceUser,choicePC){
     contadorPc++
     viewChoicePC(choicePC)
     alterarScore()
+
+    document.getElementById(choiceUser).style.backgroundColor = "red";
+    function horarioAtual() {
+        document.getElementById(choiceUser).style.backgroundColor = "white";
+      }
+      setTimeout(horarioAtual, 1000);
 }
 
 function empate(choiceUser,choicePC){
 
     result.innerHTML = choiceUser .toUpperCase()+ " empata com " + choicePC.toUpperCase() + ": Empate!"
     viewChoicePC(choicePC)
+
+    document.getElementById(choiceUser).style.backgroundColor = "yellow";
+    function horarioAtual() {
+        document.getElementById(choiceUser).style.backgroundColor = "white";
+      }
+      setTimeout(horarioAtual, 1000);
 
 }
