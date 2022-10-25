@@ -50,7 +50,7 @@
      font-family: 'Asap',sans-serif;
 }
  .escolhas{
-     width: 30%;
+     width: 150px;
      display: inline-block;
      text-align: center;
      border: 3px solid #fff;
@@ -64,19 +64,18 @@
  .ctnFlex{
      display: flex;
      justify-content: space-between;
-     max-width: 30%;
+     max-width: 500px;
      margin: 0 auto !important;
 }
  .escolhaBot{
-     width: 30%;
      display: inline-block;
      border: 3px solid #fff;
-     margin: 25% auto;
+     margin: 140px auto;
      color: #fff;
      background-color: darkslateblue;
      border-radius: 40px;
      text-align: center;
-     padding: 20px 15px;
+     padding: 20px 10px;
      position: relative;
 }
  .reiniciar{
@@ -109,36 +108,3 @@
      display: inline-block;
      transition: all 0.4s ease;
 }
- /* #action-message{
-     text-align: center;
-     color: #fff;
-     font-family: 'Asap',sans-serif;
-     font-weight: bold;
-     font-size: 20px;
-}
- .green-glow{
-     border: 4px solid #4dcc7d;
-     box-shadow: 0 0 10px #31b43a;
-}
- .red-glow{
-     border: 4px solid #fc121b;
-     box-shadow: 0 0 10px #d01115;
-}
- .gray-glow{
-     border: 4px solid #464647;
-     box-shadow: 0 0 10px #25292b;
-} */
-/* este estilo aplica-se a partir de 0px at? 900px */
- @media ( max-width: 900px ) {
-     .escolhas{
-         width: 40%;
-    }
-     .ctnFlex{
-         max-width: 100%;
-    }
-     .escolhaBot{
-         width: 40%;
-         margin: 35% auto;
-    }
-}
- 
