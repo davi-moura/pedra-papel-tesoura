@@ -7,15 +7,7 @@ const choiceBotIcon = document.getElementById("btnReiniciar");
 
 
 
-
-
-//criar function para colorir a borda do botao pra caso o cara ganhe ou perca
-
-
-//mostrar todas as opcoes de escolha do bot, e a q ele escolher pintar de verde, e pintar a borda dele se ele ganhou ou n
-
-//colocar titulo de quem � quem em cima das bordas da div, pra dizer quem � o user e quem � o comp
-
+//mostrar todas as opcoes de escolha do bot, e a q ele escolher pintar com a cor de vencer/perder/empatar
 
 function viewChoicePC(choicePC) {
 
@@ -38,7 +30,6 @@ function viewChoicePC(choicePC) {
     document.getElementById("choiceBotIcon").classList.value = nova
 }
 
-
 function alterarScore(){
     // Fun��o para alterar o score
     placarUser.innerHTML = `${contadorJogador}`
@@ -59,17 +50,18 @@ function limpaScore(){
     viewChoicePC()
 }
 
+
+
 //Busca todos os elementos da classe 'btn'
 var x = document.getElementsByClassName('btn');
 
 for (i = 0; i < x.length; i++){
-    var choiceUser = x[i].id;//pega o id
-    choices(choiceUser);
+    var choiceUserClick = x[i].id;//pega o id
+    choices(choiceUserClick);
 }
 
-
-function choices(choiceUser){
-    document.getElementById(choiceUser).addEventListener("click", function(){
+function choices(choiceUserClick){
+    document.getElementById(choiceUserClick).addEventListener("click", function(){
         
         //escolhas do pc
         let index = Math.floor(Math.random() * 3)
@@ -78,9 +70,11 @@ function choices(choiceUser){
         var choicePC =  choices[index]
         //fim
 
-        tratarChoices(choiceUser,choicePC)
+        tratarChoices(choiceUserClick,choicePC)
     });
 }
+
+
 
 function tratarChoices(choiceUser,choicePC){
 
@@ -144,11 +138,12 @@ function winUser(choiceUser,choicePC){
     alterarScore()
 
     document.getElementById(choiceUser).style.backgroundColor = "green";
-
-    function horarioAtual() {
+    document.getElementById("choiceBot").style.backgroundColor ="red";
+    function resetaCor() {
         document.getElementById(choiceUser).style.backgroundColor = "white";
-      }
-      setTimeout(horarioAtual, 1000);
+        document.getElementById("choiceBot").style.backgroundColor ="white";
+    }
+    setTimeout(resetaCor, 500);
 }
 
 function loseUser(choiceUser,choicePC){
@@ -159,21 +154,25 @@ function loseUser(choiceUser,choicePC){
     alterarScore()
 
     document.getElementById(choiceUser).style.backgroundColor = "red";
-    function horarioAtual() {
+    document.getElementById("choiceBot").style.backgroundColor = "green";
+    function resetaCor() {
         document.getElementById(choiceUser).style.backgroundColor = "white";
-      }
-      setTimeout(horarioAtual, 1000);
+        document.getElementById("choiceBot").style.backgroundColor = "white";
+    }
+    setTimeout(resetaCor, 500);
 }
 
 function empate(choiceUser,choicePC){
 
-    result.innerHTML = choiceUser .toUpperCase()+ " empata com " + choicePC.toUpperCase() + ": Empate!"
+    result.innerHTML = choiceUser.toUpperCase() + " empata com " + choicePC.toUpperCase() + ": Empate!"
     viewChoicePC(choicePC)
 
     document.getElementById(choiceUser).style.backgroundColor = "yellow";
-    function horarioAtual() {
+    document.getElementById("choiceBot").style.backgroundColor = "yellow";
+    function resetaCor() {
         document.getElementById(choiceUser).style.backgroundColor = "white";
-      }
-      setTimeout(horarioAtual, 1000);
+        document.getElementById("choiceBot").style.backgroundColor = "white";
+    }
+    setTimeout(resetaCor, 500);
 
 }
